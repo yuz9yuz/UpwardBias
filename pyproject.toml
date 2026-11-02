@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "upward-bias"
+version = "0.1.0"
+description = "Data and reproducible analyses of selection bias in self-reported peer review"
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+authors = [
+  {name = "Hangxiao Zhu"},
+  {name = "Yian Yin"},
+  {name = "Yu Zhang"},
+]
+dependencies = [
+  "numpy==2.2.5",
+  "scipy==1.15.2",
+  "matplotlib==3.10.3",
+]
+
+[project.scripts]
+upward-bias = "upward_bias.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
