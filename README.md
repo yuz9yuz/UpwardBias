@@ -1,12 +1,10 @@
 <div align="center">
 
-<img src="docs/assets/overview.svg" width="900" alt="Upward Bias: audit, characterize, and calibrate self-reported peer-review outcomes">
-
-### Auditing and calibrating selection bias in self-reported peer-review data
+# Auditing and calibrating selection bias in self-reported peer-review data
 
 **Hangxiao Zhu · Yian Yin · Yu Zhang**
 
-[Paper](https://arxiv.org/abs/2509.16831) &nbsp; / &nbsp; [Quick start](#quick-start) &nbsp; / &nbsp; [Data](#data) &nbsp; / &nbsp; [Reproduce the paper](#reproduce-the-paper) &nbsp; / &nbsp; [Citation](#citation)
+[Paper](https://arxiv.org/abs/2509.16831) &nbsp; / &nbsp; [Results](#main-results) &nbsp; / &nbsp; [Quick start](#quick-start) &nbsp; / &nbsp; [Data](#data) &nbsp; / &nbsp; [Reproduce the paper](#reproduce-the-paper) &nbsp; / &nbsp; [Citation](#citation)
 
 </div>
 
@@ -20,6 +18,26 @@ population data can improve estimates from current reports.
 | Self-reports | 2,467 records represented by 1,885 individual rows and 582 aggregated Paper Copilot reports |
 | Settings | Three ARR cycles, two ICLR editions, and acceptance-rate comparisons for WWW, KDD, CVPR, and AAAI |
 | Reproduction | Four main figures, four supplementary figures, descriptive statistics, and calibration with bootstrap evaluation |
+
+## Main results
+
+**Figure 1. Self-reported outcomes are shifted upward and enriched for acceptances.**
+
+<p align="center">
+  <img src="docs/assets/figure1.png" width="900" alt="Figure 1: Population and self-reported review-score distributions, score summaries, acceptance rates, and platform comparisons">
+</p>
+
+**Figure 2. Reporting varies with outcomes and proximity to acceptance boundaries.**
+
+<p align="center">
+  <img src="docs/assets/figure2.png" width="900" alt="Figure 2: Reporting proportions, accepted and rejected score distributions, and boundary proximity among reports without disclosed decisions">
+</p>
+
+**Figure 3. Historical calibration improves decision-relevant and distributional estimates.**
+
+<p align="center">
+  <img src="docs/assets/figure3.png" width="900" alt="Figure 3: Historical calibration improves acceptance-prediction F1 and reduces distributional error">
+</p>
 
 ## Quick start
 
@@ -88,11 +106,8 @@ working directory.
 
 Each figure is also saved as PNG. Numerical results are written to
 `outputs/tables/` as CSV and JSON. Figures are drawn directly from the bundled
-data; the preview below is an example output, not a plotting input.
-
-<p align="center">
-  <img src="docs/assets/calibration.png" width="900" alt="Historical calibration improves acceptance-prediction F1 and reduces distributional error">
-</p>
+data. The paper figures shown above are provided for reference and are not
+plotting inputs.
 
 ### Reproducibility notes
 
@@ -121,7 +136,7 @@ upward-bias/
 │   ├── calibration.py      # Quantile-delta correction and bootstrap
 │   ├── figures/            # Current main and supplementary figures
 │   └── style.py            # Shared colors, fonts, and physical dimensions
-├── docs/                   # Data dictionary, methods, and README illustrations
+├── docs/                   # Data dictionary, methods, and referenced paper figures
 ├── tests/                  # Data consistency and published-result checks
 ├── CITATION.cff
 └── pyproject.toml

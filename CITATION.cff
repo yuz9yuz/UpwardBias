@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use these data or analyses, please cite the arXiv preprint in preferred-citation."
+type: software
+title: "Auditing and calibrating selection bias in self-reported peer-review data"
+version: 0.1.0
+authors:
+  - family-names: Zhu
+    given-names: Hangxiao
+  - family-names: Yin
+    given-names: Yian
+  - family-names: Zhang
+    given-names: Yu
+abstract: >-
+  Standardized quantitative data and reproducible analyses comparing voluntary
+  peer-review self-reports with population benchmarks, including historical
+  quantile-delta calibration and the main and supplementary figures.
+preferred-citation:
+  type: article
+  title: "Survivors, Complainers, and Borderliners: Upward Bias in Online Discussions of Academic Conference Reviews"
+  authors:
+    - family-names: Zhu
+      given-names: Hangxiao
+    - family-names: Yin
+      given-names: Yian
+    - family-names: Zhang
+      given-names: Yu
+  journal: arXiv
+  year: 2025
+  doi: 10.48550/arXiv.2509.16831
+  url: https://arxiv.org/abs/2509.16831
+
